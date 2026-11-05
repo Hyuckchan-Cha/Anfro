@@ -1,0 +1,9 @@
+node_modules
+tools/*.xlsx
+.env*
+tools
+db
+src
+test
+data
+배포안내.md

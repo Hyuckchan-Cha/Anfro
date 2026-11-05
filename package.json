@@ -1,0 +1,23 @@
+{
+  "name": "math-misconception-diagnosis",
+  "private": true,
+  "description": "수학 오개념 진단 도우미 — Vercel(Node) + Supabase(Postgres·Storage)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "gen:server": "node tools/build_server.js",
+    "gen:client": "node tools/build_client.js",
+    "gen": "node tools/build_server.js && node tools/build_client.js",
+    "test": "node tools/test_mock.js && node tools/test_pg.js && node tools/test_concurrency.js",
+    "admin": "node tools/admin.js"
+  },
+  "dependencies": {
+    "postgres": "3.4.5"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.2.17",
+    "acorn": "8.14.0",
+    "acorn-walk": "8.3.4"
+  }
+}
